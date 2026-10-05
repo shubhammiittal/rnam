@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ankit Mittal | Chartered Accountant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #0b3c5d;
+            --secondary: #1d84b5;
+            --light: #f4f7fb;
+            --dark: #222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(to right, #0b3c5d, #1d84b5);
+            color: #fff;
+            padding: 90px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-text button {
+            padding: 14px 30px;
+            background: #fff;
+            color: var(--primary);
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero-text button:hover {
+            background: #eaeaea;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+        }
+
+        section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        section p.section-desc {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #555;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h4 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about div {
+            flex: 1;
+        }
+
+        .about p {
+            line-height: 1.7;
+        }
+
+        /* WHY CHOOSE */
+        .why {
+            background: #fff;
+        }
+
+        .why-list {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .why-list li {
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        /* CONTACT */
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media(max-width:768px) {
+            .hero-text h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RNAM Consultant</h1>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Trusted Financial Professionals for Your Financial Growth</h2>
+        <p>
+            We provide end-to-end advisory services across taxation, audit, financial management, and business planning. Our expertise includes budgeting, financial analysis, and management reporting, with a strong emphasis on regulatory compliance and data-driven support for strategic decision-making.
+        </p>
+        <button onclick="scrollToContact()">Book a Consultation</button>
+    </div>
+</section>
+
+<section id="services">
+    <h3>Our Services</h3>
+    <p class="section-desc">Comprehensive accounting and financial services tailored to your needs.</p>
+
+    <div class="services">
+        <div class="service-card">
+            <h4>Income Tax Planning & Filing</h4>
+            <p>Accurate and timely tax filing with smart tax-saving strategies.</p>
+        </div>
+        <div class="service-card">
+            <h4>GST Registration & Compliance</h4>
+            <p>Complete GST solutions for individuals and businesses.</p>
+        </div>
+        <div class="service-card">
+            <h4>Audit & Assurance</h4>
+            <p>Statutory, internal, and tax audits with full compliance.</p>
+        </div>
+        <div class="service-card">
+            <h4>Business Advisory</h4>
+            <p>Financial guidance to help your business grow sustainably.</p>
+        </div>
+        <div class="service-card">
+            <h4>Financial Management</h4>
+            <p>Budgeting, Forecasting, Financial analysis, and MIS Reporting. </p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h3>About RNAM Consultant</h3>
+    <p class="section-desc">Professional excellence backed by trust and integrity.</p>
+
+    <div class="about">
+        <div>
+            <p>
+                RNAM Consultant provides professional services in taxation, audit, accounting, and financial advisory. We support businesses with compliance, MIS reporting, budgeting, and financial analysis, enabling informed decision-making and sustainable growth
+            </p>
+            <br>
+            <p>
+                Our mission is to simplify complex financial matters and provide reliable
+                solutions to individuals, startups, and established businesses.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <h3>Why Choose Us</h3>
+    <p class="section-desc">What makes us different and reliable.</p>
+
+    <ul class="why-list">
+        <li>✔ Experienced and Qualified Chartered Accountant</li>
+        <li>✔ Transparent & Ethical Practices</li>
+        <li>✔ Personalized Financial Solutions</li>
+        <li>✔ Timely Compliance & Support</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h3>Contact Us</h3>
+    <p class="section-desc">Get in touch for a consultation or enquiry.</p>
+
+    <form class="contact-form" onsubmit="return submitForm()">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea rows="4" id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 RNAM Consultant All Rights Reserved.</p>
+</footer>
+
+<script>
+    function scrollToContact() {
+        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function submitForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+            alert("Please fill all fields.");
+            return false;
+        }
+
+        alert("Thank you! Your message has been submitted.");
+        return false;
+    }
+</script>
+
+</body>
+</html>
